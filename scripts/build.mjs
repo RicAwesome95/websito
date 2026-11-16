@@ -59,7 +59,7 @@ const parityCss = process.env.PARITY_FONTS ? `\n:root{--font-mono:"iki-mono-vari
 // ---- css / js --------------------------------------------------------------
 execFileSync('npx', ['tailwindcss', '-i', 'src/styles.css', '-o', 'dist/assets/site.css', '--minify'], { stdio: ['ignore', 'ignore', 'inherit'] });
 await fs.writeFile('dist/assets/site.css', fontCss + (await read('dist/assets/site.css')) + parityCss);
-await fs.copyFile('src/site.js', 'dist/assets/site.js');
+execFileSync('npx', ['esbuild', 'src/js/main.js', '--bundle', '--minify', '--format=iife', '--target=es2020', '--outfile=dist/assets/site.js', '--log-level=warning'], { stdio: 'inherit' });
 
 // ---- pages -----------------------------------------------------------------
 const section = (route) => '/' + (route.split('/')[1] || '');

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @source "../content";
-@source "./site.js";
-@source "./home.html";
+@source "./js";
+@source "./pages";
 
 /* ---------------------------------------------------------------- tokens */
 @theme {
   --breakpoint-sm: 37.5rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 80rem;
-  --breakpoint-xl: 96rem;
-  --breakpoint-2xl: initial;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
 
   --color-black-80: #333;
   --color-black-60: #666;
@@ -178,7 +178,6 @@
 .page-content { position: relative; z-index: 3; }
 #navigation-menu { transition: opacity 200ms ease, visibility 0s linear 200ms; }
 #navigation-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
-.menu-toggle-icon.is-open { transform: rotate(45deg); }
 @media (min-width: 64rem) {
   .navigation-menu-item { font-size: min(12.5vw, 20vh); line-height: 0.8; }
   .navigation-menu-item .menu-link { font-size: 1em; }
@@ -204,12 +203,22 @@
 }
 .homepage-footer-logo { display: none; }
 
-/* --------------------------------------------------------- scroll reveals */
+/* ----------------------------------------------------------- team marquee */
+.our-team-marquee { overflow: hidden; }
+.our-team-marquee__track { display: flex; align-items: flex-start; width: max-content; }
+.our-team-marquee__group { display: flex; align-items: flex-start; flex: none; }
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-reveal] { transition: opacity 0.6s ease-out, transform 0.7s var(--ease-in-out-quart), clip-path 0.9s var(--ease-in-out-quart); }
-  .js [data-reveal="fade"]:not(.is-revealed) { opacity: 0; }
-  .js [data-reveal="rise"]:not(.is-revealed) { transform: translateY(110%); }
-  .js [data-reveal="clip"]:not(.is-revealed) { clip-path: inset(0 0 100% 0); }
-  .js [data-reveal="scale-x"] { transform-origin: left; }
-  .js [data-reveal="scale-x"]:not(.is-revealed) { transform: scaleX(0); }
+  .our-team-marquee__group { animation: our-team-marquee var(--marquee-duration, 40s) linear infinite; }
 }
+@keyframes our-team-marquee { to { transform: translateX(-100%); } }
+
+/* Lenis smooth scrolling */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+html.menu-open { overflow: hidden; }
+
+/* Font specimen pages reference faces that are not shipped, so they fall back to generic families. */
+.page--font-test .payload-richtext { font-family: "Test Die Grotesk VF", sans-serif; }
+.page--font-test .payload-richtext :is(h1, h2, h3, h4, h5, h6) { font-family: "403 Mesapholic", serif; }
