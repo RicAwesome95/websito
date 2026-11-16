@@ -108,6 +108,19 @@ function fillTeamMarquee($, rawHtml) {
   }
 }
 
+// Media reveal settings (duration, parallax) live in component props; copy them onto the
+// matching elements when the props and the rendered elements line up one-to-one.
+function annotateReveals($, content, rawHtml) {
+  const props = [...payload(rawHtml).matchAll(/"duration":("\$undefined"|[\d.]+),"onRevealComplete":"\$undefined","parallax":("\$undefined"|[\d.]+),"children":\["\$","img",null,\{[^}]*?"src":"([^"]+)"/g)];
+  const els = content.find('[data-reveal^="clip"]').get();
+  for (const [, duration, parallax, src] of props) {
+    const el = els.find((candidate) => $(candidate).find('img').attr('src') === src);
+    if (!el) continue;
+    if (!duration.startsWith('"')) el.attribs['data-reveal-duration'] = duration;
+    if (!parallax.startsWith('"')) el.attribs['data-reveal-parallax'] = parallax;
+  }
+}
+
 const list = await routes();
 await fs.rm('content/pages', { recursive: true, force: true });
 await fs.mkdir('content/pages', { recursive: true });
@@ -122,6 +135,7 @@ for (const route of list) {
   const content = $('.frontend-content').children().first();
   if (!content.length) { console.warn('no content', route); continue; }
   clean($, content);
+  annotateReveals($, content, rawHtml);
   const slug = slugFor(route);
   await fs.writeFile(`content/pages/${slug}.html`, html(content) + '\n');
   pages.push({

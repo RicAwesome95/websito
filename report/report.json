@@ -1,0 +1,622 @@
+{
+  "/": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/about": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/approach": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/contact": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/big-tech-ate-our-attention": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/doubled-down-the-changing-economics-of-growth-brands-and-work": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/from-coal-dust-to-compute-the-new-engines-of-growth": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/the-end-of-an-era-how-branding-lost-the-plot": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/the-great-distraction-focus-in-a-fractured-world": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/the-price-of-broken-promises": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/when-productivity-becomes-the-new-currency": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/articles/why-hard-work-is-losing-its-brand": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/brand-in-the-boardroom": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/brand-in-the-boardroom/brand-in-the-boardroom": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies/bt-l-ep5": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies/bt-l-ep6": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies/the-metrics-edition": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies/the-truth-about-brand-differentiation": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies/why-brand-strategy-fails-in-the-boardroom": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/branding-truth-lies/why-most-rebrands-fail": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/in-conversation-with": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/in-conversation-with/brand-purpose-positioning": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/in-conversation-with/brand-strategy-best-practice": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/in-conversation-with/marketing-customer-leadership": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/in-conversation-with/niche-at-scale": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/in-conversation-with/rethinking-retail": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/retail-audit": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/retail-audit/north-america": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/insights/webinars/retail-audit/seven-things-you-need-to-know": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/ipsum": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/lorem": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/page-title-for-cms-training": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/reports": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/accounts": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/accounts/alissadinham": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/accounts/mo-alhorub": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/business": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/business/megan-rogers": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/design": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/design/buffii-spence": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/design/ryan-allcott": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/design/tom-hutcheon": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/strategy": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/strategy/gareth-joe": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/strategy/joe-rogers": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/team/strategy/mackenzie-maughan": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/terms": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/test-page": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/test-page-for-loom": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work/climate-active": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work/diversity-council-australia": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work/monash-ivf": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work/nyaal-banyul": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work/pickleball-australia": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  },
+  "/work/wesley-mission": {
+    "coverage": [],
+    "content": [],
+    "links": [],
+    "layout": {
+      "390": [],
+      "1440": []
+    },
+    "runtime": []
+  }
+}

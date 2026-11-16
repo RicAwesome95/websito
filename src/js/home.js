@@ -121,9 +121,6 @@ export function initHome() {
   };
   artwork?.addEventListener('click', reveal);
   addEventListener('keydown', reveal, { once: true });
-  addEventListener('wheel', reveal, { once: true, passive: true });
-  addEventListener('touchmove', reveal, { once: true, passive: true });
-  addEventListener('scroll', reveal, { once: true, passive: true });
   if (prefersReducedMotion() || sessionStorage.getItem('intro-seen')) reveal();
   else setTimeout(reveal, AUTO_REVEAL_MS);
   try { sessionStorage.setItem('intro-seen', '1'); } catch {}

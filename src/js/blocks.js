@@ -6,7 +6,8 @@ import { $, $$, gsap, ScrollTrigger, withMotion, refreshOnResize, setPanel, isPa
 export function initMediaReveal() {
   for (const el of $$('[data-reveal^="clip"]')) {
     const from = el.dataset.reveal === 'clip-up' ? 'inset(100% 0% 0% 0%)' : 'inset(0% 0% 100% 0%)';
-    const duration = el.closest('[data-block="FeaturedWork"]') ? 0.9 : 0.6;
+    const duration = Number(el.dataset.revealDuration) || (el.closest('[data-block="FeaturedWork"]') ? 0.9 : 0.6);
+    const parallax = Number(el.dataset.revealParallax) || 0;
     withMotion(() => {
       let played = false;
       let armed = false;
@@ -16,12 +17,14 @@ export function initMediaReveal() {
         gsap.fromTo(el, { clipPath: from }, { clipPath: 'inset(0% 0% 0% 0%)', duration, ease: 'power3.inOut', overwrite: 'auto' });
       };
       gsap.set(el, { clipPath: from });
+      const stopRefresh = parallax ? refreshOnResize(el) : null;
+      if (parallax) gsap.fromTo(el, { y: 0 }, { y: parallax, ease: 'none', scrollTrigger: { trigger: el, start: 'top 26%', end: 'bottom top', scrub: true } });
       const rect = el.getBoundingClientRect();
       armed = rect.bottom <= 0 || rect.top <= 0.85 * innerHeight;
       document.addEventListener('visibilitychange', play);
       if (armed) play();
       else ScrollTrigger.create({ trigger: el, start: 'top 85%', once: true, onEnter: () => { armed = true; play(); } });
-      return () => document.removeEventListener('visibilitychange', play);
+      return () => { document.removeEventListener('visibilitychange', play); stopRefresh?.(); };
     });
   }
 }
@@ -333,7 +336,7 @@ export function initTestimonials() {
         return { start: b.top - top, end: b.bottom - top - media.offsetHeight };
       };
       gsap.fromTo(media, { y: () => range().start }, { y: () => range().end, ease: 'none', scrollTrigger: { trigger: block, start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });
-    });
+    }, '(min-width: 1280px)');
   }
 }
 
@@ -347,7 +350,7 @@ export function initScrollHeadings() {
         return { left: r.left - x, right: r.right - x };
       };
       gsap.fromTo(el, { x: () => document.documentElement.clientWidth - box().right }, { x: () => -box().left, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });
-    });
+    }, '(min-width: 48rem)');
   }
 }
 
