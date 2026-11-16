@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.cache/
+public/fonts/licensed/
+report/shots/

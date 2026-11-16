@@ -1,0 +1,498 @@
+[
+  {
+    "route": "/",
+    "slug": "index",
+    "title": "The Contenders | Strategic Brand & Design Consultancy",
+    "description": "Where business meets brand. The Contenders is an independent Australian consultancy creating distinctive brands that deliver measurable impact.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/about",
+    "slug": "about",
+    "title": "About Us | Strategic Brand Agency | The Contenders",
+    "description": "Get to know The Contenders, an independent Australian strategic consultancy connecting business, brand and creativity to deliver measurable impact.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/approach",
+    "slug": "approach",
+    "title": "Our Approach | Strategy Delivers Results | The Contenders",
+    "description": "Discover how The Contenders connects business objectives with strategy to deliver meaningful impact and measurable results.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/contact",
+    "slug": "contact",
+    "title": "Contact Us",
+    "description": "",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/CONTACT%20US-cf99d8ae-a4f6-4a96-acfb-62b903201beb.svg",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights",
+    "slug": "insights",
+    "title": "Insights",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles",
+    "slug": "insights__articles",
+    "title": "Articles & Insights | Brand & Marketing | The Contenders",
+    "description": "Explore fresh perspectives on brand strategy, marketing and business from The Contenders. Insights that drive growth.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/big-tech-ate-our-attention",
+    "slug": "insights__articles__big-tech-ate-our-attention",
+    "title": "How AI is shifting technology from attention to intimacy",
+    "description": "Why the brands that win will be those that build genuine trust, emotional relevance and a distinctive point of view.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Big%20Tech_Rec-ff1dcbdf-7587-47b3-8cbd-c01250a879f0.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/doubled-down-the-changing-economics-of-growth-brands-and-work",
+    "slug": "insights__articles__doubled-down-the-changing-economics-of-growth-brands-and-work",
+    "title": "How the economics of growth are changing brands and work",
+    "description": "Why the smartest businesses will combine technology with the judgement, creativity and human capital that machines can’t replace.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Doubled%20Down_Rec-336c3921-3edb-471d-a75f-c52b937828ad.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/from-coal-dust-to-compute-the-new-engines-of-growth",
+    "slug": "insights__articles__from-coal-dust-to-compute-the-new-engines-of-growth",
+    "title": "The end of Australia’s growth cycle is reshaping advantage",
+    "description": "Why the next era will be won by businesses that turn new technology into productivity, innovation and real value.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Coal%20Dust_Rec-cbc882ed-6aad-4398-906f-c365991bedbe.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy",
+    "slug": "insights__articles__from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy",
+    "title": "What our stalled productivity can teach us about strategy",
+    "description": "Why growth depends on making sharper choices about where to compete, how to differentiate and where value can be created.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Stag_Rec-501c1dbf-1d9d-468a-a6ce-802c62502741.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/the-end-of-an-era-how-branding-lost-the-plot",
+    "slug": "insights__articles__the-end-of-an-era-how-branding-lost-the-plot",
+    "title": "Why brands have lost their way in the pursuit of attention",
+    "description": "Why brands have lost their way in the pursuit of attention, and why the strongest brands will return to what made them valuable in the first place.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Anvil_Rec-e7eb0223-cd62-4d2b-8494-b83877bb112e.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/the-great-distraction-focus-in-a-fractured-world",
+    "slug": "insights__articles__the-great-distraction-focus-in-a-fractured-world",
+    "title": "How changing consumer behaviour is reshaping marketing",
+    "description": "How fragmented attention, shifting channels and changing consumer behaviour are reshaping marketing to make strong brands.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Great%20Distraction_Rec-b0da5de2-2418-4343-a1f7-36cd3383d2de.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/the-price-of-broken-promises",
+    "slug": "insights__articles__the-price-of-broken-promises",
+    "title": "The effect of broken middle-class promises on behaviour",
+    "description": "The middle-class promise is reshaping consumer behaviour, and forcing brands to choose between undeniable value and genuine distinction.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Broken%20Promises_Rec-90baf412-e206-4c25-9c71-fa1abd028133.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/when-productivity-becomes-the-new-currency",
+    "slug": "insights__articles__when-productivity-becomes-the-new-currency",
+    "title": "How AI’s economics are reshaping productivity and ROI",
+    "description": "Why the organisations that adapt fastest will combine new technology with more agile ways of working and human judgement.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_Productivity_Rec-6abd6175-c0ec-4fa6-86d9-cd68793bfd97.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/articles/why-hard-work-is-losing-its-brand",
+    "slug": "insights__articles__why-hard-work-is-losing-its-brand",
+    "title": "The fading promise hard work leads to reward is reshaping us",
+    "description": "How past dreams are now dead and why brands need a point of view to stay relevant in the autonomy age.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/Article%20Images_New%20Era_Rec-93f713f8-67c4-45b6-84b1-115ddd4ac508.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars",
+    "slug": "insights__webinars",
+    "title": "Insights / Webinars",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/brand-in-the-boardroom",
+    "slug": "insights__webinars__brand-in-the-boardroom",
+    "title": "Brand In The Boardroom",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/brand-in-the-boardroom/brand-in-the-boardroom",
+    "slug": "insights__webinars__brand-in-the-boardroom__brand-in-the-boardroom",
+    "title": "How to fight for the value of brand in the boardroom",
+    "description": "We talked to Australia's leading CMOs about how they garner trust and position and respect in the boardroom",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies",
+    "slug": "insights__webinars__branding-truth-lies",
+    "title": "Branding Truth + Lies",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies/bt-l-ep5",
+    "slug": "insights__webinars__branding-truth-lies__bt-l-ep5",
+    "title": "Branding truths and lies and the in between with Mark Ritson",
+    "description": "Join world-renowned marketing expert Mark Ritson and The Contenders as we explore the truths, myths and strategies behind effective branding.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/BRANDING%20TRUTH%20%2B%20LIES-fc95f7bb-32b8-4f65-9130-65c43cb80923.svg",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies/bt-l-ep6",
+    "slug": "insights__webinars__branding-truth-lies__bt-l-ep6",
+    "title": "Branding truths and lies and the in between with Mark Ritson",
+    "description": "Join world-renowned marketing expert Mark Ritson and The Contenders as we explore the truths, myths and strategies behind effective branding.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/TC_Webinar_BT%26L-3fd37c4e-475e-4498-b003-78ae9af9ab09.jpg",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies/the-metrics-edition",
+    "slug": "insights__webinars__branding-truth-lies__the-metrics-edition",
+    "title": "Branding truths and lies and the in between with Mark Ritson",
+    "description": "Join world-renowned marketing expert Mark Ritson and The Contenders as we explore the truths, myths and strategies behind effective branding.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies/the-truth-about-brand-differentiation",
+    "slug": "insights__webinars__branding-truth-lies__the-truth-about-brand-differentiation",
+    "title": "Branding truths and lies and the in between with Mark Ritson",
+    "description": "Join world-renowned marketing expert Mark Ritson and The Contenders as we explore the truths, myths and strategies behind effective branding.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies/why-brand-strategy-fails-in-the-boardroom",
+    "slug": "insights__webinars__branding-truth-lies__why-brand-strategy-fails-in-the-boardroom",
+    "title": "Branding truths, lies and everything in between.",
+    "description": "",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/TC_Webinar_BT%26L-3fd37c4e-475e-4498-b003-78ae9af9ab09.jpg",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/branding-truth-lies/why-most-rebrands-fail",
+    "slug": "insights__webinars__branding-truth-lies__why-most-rebrands-fail",
+    "title": "Branding truths and lies and the in between with Mark Ritson",
+    "description": "Join world-renowned marketing expert Mark Ritson and The Contenders as we explore the truths, myths and strategies behind effective branding.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/in-conversation-with",
+    "slug": "insights__webinars__in-conversation-with",
+    "title": "In Conversation With",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/in-conversation-with/brand-purpose-positioning",
+    "slug": "insights__webinars__in-conversation-with__brand-purpose-positioning",
+    "title": "Brand purpose and positioning and the latest trends ",
+    "description": "What is the real difference between purpose and positioning and what are we missing in the world of marketing",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/in-conversation-with/brand-strategy-best-practice",
+    "slug": "insights__webinars__in-conversation-with__brand-strategy-best-practice",
+    "title": "In conversation about the best strategy practice in brand",
+    "description": "In conversation with the best minds in brand strategy and the best practice in brand and marketing here and across the globe.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/in-conversation-with/marketing-customer-leadership",
+    "slug": "insights__webinars__in-conversation-with__marketing-customer-leadership",
+    "title": "The latest trends in brand and marketing leadership",
+    "description": "Listen to the best in Australia talk about trends in marketing and brand and how to ensure work is linked to a return on investment",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/in-conversation-with/niche-at-scale",
+    "slug": "insights__webinars__in-conversation-with__niche-at-scale",
+    "title": "In conversation with marketing experts about best practice",
+    "description": "Listen to the best in Australia talk about trends in marketing and brand and how to ensure work is linked to a return on investment",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/in-conversation-with/rethinking-retail",
+    "slug": "insights__webinars__in-conversation-with__rethinking-retail",
+    "title": "Rethinking how we approach retail and FMCG brand and markets",
+    "description": "Explore key trends shaping retail and FMCG, from changing consumer behaviour to brand strategy, marketing effectiveness and opportunities for growth.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/retail-audit",
+    "slug": "insights__webinars__retail-audit",
+    "title": "Retail Webinar | Brand Strategy & Growth | The Contenders",
+    "description": "Discover how retailers can build stronger brands, stand out in a competitive market and drive sustainable growth. ",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/TC_Brandmark-c5a9c762-fdc1-4d23-95e7-0ca5959aa89f.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/retail-audit/north-america",
+    "slug": "insights__webinars__retail-audit__north-america",
+    "title": "International retail audit covering all the latest trends",
+    "description": "Explore seven trends shaping retail and FMCG, changing consumer behaviour to brand strategy, marketing effectiveness and opportunities for growth.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/insights/webinars/retail-audit/seven-things-you-need-to-know",
+    "slug": "insights__webinars__retail-audit__seven-things-you-need-to-know",
+    "title": "Seven Things You Need to Know About Retail and FMCG",
+    "description": "Explore seven trends shaping retail and FMCG, changing consumer behaviour to brand strategy, marketing effectiveness and opportunities for growth.",
+    "ogImage": "https://uxr3ja3alorcgxuu.public.blob.vercel-storage.com/logo%20(1)-73badce0-5dbc-47f2-8d2d-d6b3f25739b4.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/ipsum",
+    "slug": "ipsum",
+    "title": "Ipsum",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/lorem",
+    "slug": "lorem",
+    "title": "Lorem",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/page-title-for-cms-training",
+    "slug": "page-title-for-cms-training",
+    "title": "CMS Training",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/reports",
+    "slug": "reports",
+    "title": "Reports & Insights | Strategy & Research | The Contenders",
+    "description": "Explore insights from The Contenders on brand strategy, marketing and business growth. Discover ideas that challenge thinking and drive impact.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team",
+    "slug": "team",
+    "title": "Our Team | Brand Strategy & Design Experts | The Contenders",
+    "description": "A mix of experienced strategists, creatives, accounts managers and designers; winning for us means helping you achieve your objectives.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/accounts",
+    "slug": "team__accounts",
+    "title": "Team / Accounts",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/accounts/alissadinham",
+    "slug": "team__accounts__alissadinham",
+    "title": "alissa dinham",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/accounts/mo-alhorub",
+    "slug": "team__accounts__mo-alhorub",
+    "title": "Moè Alhorub",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/business",
+    "slug": "team__business",
+    "title": "Team / Business",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/business/megan-rogers",
+    "slug": "team__business__megan-rogers",
+    "title": "Megan Rogers",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/design",
+    "slug": "team__design",
+    "title": "Team / Design",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/design/buffii-spence",
+    "slug": "team__design__buffii-spence",
+    "title": "Buffii Spence",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/design/ryan-allcott",
+    "slug": "team__design__ryan-allcott",
+    "title": "Ryan Allcott",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/design/tom-hutcheon",
+    "slug": "team__design__tom-hutcheon",
+    "title": "Tom Hutcheon",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/strategy",
+    "slug": "team__strategy",
+    "title": "This is a test",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/strategy/gareth-joe",
+    "slug": "team__strategy__gareth-joe",
+    "title": "Gareth Joe",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/strategy/joe-rogers",
+    "slug": "team__strategy__joe-rogers",
+    "title": "Joe Rogers",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/team/strategy/mackenzie-maughan",
+    "slug": "team__strategy__mackenzie-maughan",
+    "title": "Mackenzie Maughan",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/terms",
+    "slug": "terms",
+    "title": "Terms",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/test-page",
+    "slug": "test-page",
+    "title": "Test page",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/test-page-for-loom",
+    "slug": "test-page-for-loom",
+    "title": "Loom page",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work",
+    "slug": "work",
+    "title": "Our Work | Brand Strategy & Design | The Contenders",
+    "description": "Explore The Contenders' work. Discover how we create distinctive brands that deliver meaningful business and organisational results.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work/climate-active",
+    "slug": "work__climate-active",
+    "title": "How we branded Australia’s initiative for climate action.",
+    "description": "Establishing a system that functions seamlessly as both a consumer-facing brand and an authoritative certification mark, building long-term equity.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work/diversity-council-australia",
+    "slug": "work__diversity-council-australia",
+    "title": "Diversity Council Australia",
+    "description": "",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work/monash-ivf",
+    "slug": "work__monash-ivf",
+    "title": "Creating a brand to pioneer the future of fertility.",
+    "description": "We positioned Monash IVF to build on its heritage as a pioneer, crafting a clear narrative around the bold, progressive future of reproductive health.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work/nyaal-banyul",
+    "slug": "work__nyaal-banyul",
+    "title": "Branding Nyaal Banyul Geelong Convention and Event Centre.",
+    "description": "Gather round to experience a new perspective pays homage to the site’s history on the iconic Western Beach cliffs in Djilang (Geelong). ",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work/pickleball-australia",
+    "slug": "work__pickleball-australia",
+    "title": "Rebranding Pickleball Australia through brand and marketing.",
+    "description": "Creating a brand that could unite a fast-moving community that was joyful, rebellious, inclusive, and proudly different.",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  },
+  {
+    "route": "/work/wesley-mission",
+    "slug": "work__wesley-mission",
+    "title": "Wesley Mission",
+    "description": "With  over 200 years of pioneering social service and championing the voices of those often overlooked, Wesley Mission's brand needed a jolt. ",
+    "ogImage": "https://thecontenders.co/assets/og_image.png",
+    "robots": "index, follow"
+  }
+]

@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../content";
+@source "./site.js";
+@source "./home.html";
+
+/* ---------------------------------------------------------------- tokens */
+@theme {
+  --breakpoint-sm: 37.5rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 80rem;
+  --breakpoint-xl: 96rem;
+  --breakpoint-2xl: initial;
+
+  --color-black-80: #333;
+  --color-black-60: #666;
+  --color-black-30: #b2b2b2;
+  --color-black-10: #e5e5e5;
+  --color-red: #ed0000;
+  --color-active: var(--color-active-link);
+
+  --ease-in-out-quart: cubic-bezier(0.78, 0, 0.22, 1);
+}
+
+:root {
+  /* Licensed brand faces come first; they are only declared when the files are
+     present in public/fonts/licensed (see README). Open-licensed stand-ins follow. */
+  --font-serif: "Mesapholic", "Noto Serif Display Variable", "Times New Roman", serif;
+  --font-sans: "DieGrotesk", "Inter Variable", Arial, sans-serif;
+  --font-mono: "iki-mono-variable", "JetBrains Mono Variable", ui-monospace, monospace;
+  --font-body: var(--font-sans);
+
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-black);
+  --color-border: var(--color-black-30);
+  --color-active-link: var(--color-red);
+  --color-blockquote: var(--color-black-60);
+
+  --grid-column-count: 4;
+  --grid-column-gap: 1rem;
+  --inline-spacing: 1rem;
+
+  --heading-xxl-font-family: var(--font-serif); --heading-xxl-font-size: 10rem; --heading-xxl-font-weight: 400; --heading-xxl-line-height: 80%;
+  --heading-xl-font-family: var(--font-serif); --heading-xl-font-size: 12.4rem; --heading-xl-font-weight: 400; --heading-xl-line-height: 80%;
+  --heading-l-font-family: var(--font-serif); --heading-l-font-size: 4.5rem; --heading-l-font-weight: 400; --heading-l-line-height: 80%;
+  --heading-h1-font-family: var(--font-serif); --heading-h1-font-size: 4rem; --heading-h1-font-weight: 400; --heading-h1-line-height: 84%; --heading-h1-letter-spacing: -0.02em;
+  --heading-h2-font-family: var(--font-serif); --heading-h2-font-size: 3.5rem; --heading-h2-font-weight: 400; --heading-h2-line-height: 84%; --heading-h2-letter-spacing: -0.02em;
+  --heading-h3-font-family: var(--font-sans); --heading-h3-font-size: 1.75rem; --heading-h3-font-weight: 700; --heading-h3-line-height: 120%;
+  --heading-h4-font-family: var(--font-sans); --heading-h4-font-size: 1.5rem; --heading-h4-font-weight: 500; --heading-h4-line-height: 120%; --heading-h4-letter-spacing: -0.02em;
+  --heading-h5-font-family: var(--font-sans); --heading-h5-font-size: 1.375rem; --heading-h5-font-weight: 500; --heading-h5-line-height: 120%; --heading-h5-letter-spacing: -0.01em;
+  --heading-h6-font-family: var(--font-sans); --heading-h6-font-size: 1.125rem; --heading-h6-font-weight: 400; --heading-h6-line-height: 120%;
+  --body-l-font-family: var(--font-sans); --body-l-font-size: 1.125rem; --body-l-font-weight: 400; --body-l-line-height: 140%;
+  --body-regular-font-family: var(--font-sans); --body-regular-font-size: 1rem; --body-regular-font-weight: 400; --body-regular-line-height: 120%; --body-regular-letter-spacing: 0.02em;
+  --body-s-font-family: var(--font-sans); --body-s-font-size: 0.875rem; --body-s-font-weight: 400; --body-s-line-height: 120%;
+  --button-font-family: var(--font-sans); --button-font-size: 1rem; --button-font-weight: 700; --button-line-height: 120%;
+  --link-font-family: var(--font-sans); --link-font-size: 1rem; --link-font-weight: 500; --link-line-height: 130%;
+  --label-xl-font-family: var(--font-mono); --label-xl-font-size: 1.5rem; --label-xl-font-weight: 600; --label-xl-line-height: 120%;
+  --label-l-font-family: var(--font-mono); --label-l-font-size: 1.125rem; --label-l-font-weight: 600; --label-l-line-height: 100%;
+  --label-s-font-family: var(--font-mono); --label-s-font-size: 0.875rem; --label-s-font-weight: 300; --label-s-line-height: 120%;
+}
+@media (min-width: 48rem) {
+  :root {
+    --grid-column-count: 8; --inline-spacing: 1.25rem;
+    --heading-xxl-font-size: 23.75rem; --heading-xxl-font-weight: 500;
+    --heading-xl-font-size: 16.25rem;
+    --heading-l-font-size: 11.25rem;
+    --heading-h1-font-size: 6rem; --heading-h1-line-height: 80%;
+    --heading-h2-font-size: 4.75rem; --heading-h2-line-height: 80%;
+    --heading-h3-font-size: 2.5rem;
+    --heading-h4-font-size: 2rem; --heading-h4-letter-spacing: unset;
+    --heading-h5-font-size: 1.5rem; --heading-h5-line-height: unset; --heading-h5-letter-spacing: unset;
+    --heading-h6-font-size: 1.25rem; --heading-h6-font-weight: 500;
+    --body-l-line-height: 120%;
+    --label-xl-font-size: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  :root { --grid-column-count: 18; --grid-column-gap: 1.25rem; }
+}
+
+/* ---------------------------------------------------------------- themes */
+[data-theme] { background-color: var(--color-background); color: var(--color-foreground); }
+[data-theme="default"], [data-theme="light"], [data-theme="white"] {
+  --color-background: var(--color-white); --color-foreground: var(--color-black); --color-border: var(--color-black-30);
+  --color-active-link: var(--color-black); --color-active-link-line: var(--color-red); --color-blockquote: var(--color-black-60);
+}
+[data-theme="dark"], [data-theme="black"] {
+  --color-background: var(--color-black); --color-foreground: var(--color-white); --color-border: var(--color-black-30);
+  --color-active-link: var(--color-white); --color-active-link-line: var(--color-red); --color-blockquote: var(--color-black-30);
+}
+[data-theme="grey"] {
+  --color-background: var(--color-black-10); --color-foreground: var(--color-black); --color-border: var(--color-black-30);
+  --color-active-link: var(--color-black); --color-active-link-line: var(--color-red);
+}
+[data-theme="red"] {
+  --color-background: var(--color-red); --color-foreground: var(--color-black); --color-border: var(--color-black-30);
+  --color-active-link: var(--color-white); --color-active-link-line: var(--color-black); --color-blockquote: var(--color-black);
+}
+[data-theme="dark-grey"] {
+  --color-background: var(--color-black-30); --color-foreground: var(--color-black); --color-border: var(--color-black-30);
+  --color-active-link: var(--color-black); --color-active-link-line: var(--color-red); --color-blockquote: var(--color-black-80);
+}
+
+/* ------------------------------------------------------------------ base */
+@layer base {
+  h1, h2, h3, h4, h5, h6 { font-weight: unset; font-size: unset; }
+  :where(.payload-richtext) {
+    font-family: var(--body-regular-font-family); font-size: var(--body-regular-font-size);
+    font-weight: var(--body-regular-font-weight); line-height: var(--body-regular-line-height);
+  }
+  html { scrollbar-gutter: stable; height: 100%; }
+  body {
+    min-height: 100vh; color: var(--color-foreground); background-color: var(--color-background);
+    font-family: var(--font-body); font-weight: 200; overflow-x: clip;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.85s ease-out;
+  }
+  ::selection { color: #fff; background-color: #da0000; }
+}
+
+/* ------------------------------------------------------- layout utilities */
+@utility container {
+  width: 100%; max-width: 100%; padding-inline: var(--inline-spacing); margin-inline: auto;
+}
+@utility container-full-width { width: 100%; padding-inline: var(--inline-spacing); }
+@utility grid {
+  display: grid; grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr)); gap: var(--grid-column-gap);
+}
+
+/* ----------------------------------------------------------- type styles */
+@utility type-heading-xxl { font-family: var(--heading-xxl-font-family); font-size: var(--heading-xxl-font-size); font-weight: var(--heading-xxl-font-weight); line-height: var(--heading-xxl-line-height); text-transform: uppercase; font-stretch: var(--serif-stretch); }
+@utility type-heading-xl { font-family: var(--heading-xl-font-family); font-size: var(--heading-xl-font-size); font-weight: var(--heading-xl-font-weight); line-height: var(--heading-xl-line-height); text-transform: uppercase; font-stretch: var(--serif-stretch); }
+@utility type-heading-l { font-family: var(--heading-l-font-family); font-size: var(--heading-l-font-size); font-weight: var(--heading-l-font-weight); line-height: var(--heading-l-line-height); text-transform: uppercase; font-stretch: var(--serif-stretch); }
+@utility type-heading-h1 { font-family: var(--heading-h1-font-family); font-size: var(--heading-h1-font-size); font-weight: var(--heading-h1-font-weight); line-height: var(--heading-h1-line-height); letter-spacing: var(--heading-h1-letter-spacing); text-transform: uppercase; font-stretch: var(--serif-stretch); }
+@utility type-heading-h2 { font-family: var(--heading-h2-font-family); font-size: var(--heading-h2-font-size); font-weight: var(--heading-h2-font-weight); line-height: var(--heading-h2-line-height); letter-spacing: var(--heading-h2-letter-spacing); text-transform: uppercase; font-stretch: var(--serif-stretch); }
+@utility type-heading-h3 { font-family: var(--heading-h3-font-family); font-size: var(--heading-h3-font-size); font-weight: var(--heading-h3-font-weight); line-height: var(--heading-h3-line-height); }
+@utility type-heading-h4 { font-family: var(--heading-h4-font-family); font-size: var(--heading-h4-font-size); font-weight: var(--heading-h4-font-weight); line-height: var(--heading-h4-line-height); letter-spacing: var(--heading-h4-letter-spacing); }
+@utility type-heading-h5 { font-family: var(--heading-h5-font-family); font-size: var(--heading-h5-font-size); font-weight: var(--heading-h5-font-weight); line-height: var(--heading-h5-line-height); letter-spacing: var(--heading-h5-letter-spacing); }
+@utility type-heading-h6 { font-family: var(--heading-h6-font-family); font-size: var(--heading-h6-font-size); font-weight: var(--heading-h6-font-weight); line-height: var(--heading-h6-line-height); }
+@utility type-body-l { font-family: var(--body-l-font-family); font-size: var(--body-l-font-size); font-weight: var(--body-l-font-weight); line-height: var(--body-l-line-height); }
+@utility type-body-regular { font-family: var(--body-regular-font-family); font-size: var(--body-regular-font-size); font-weight: var(--body-regular-font-weight); line-height: var(--body-regular-line-height); letter-spacing: var(--body-regular-letter-spacing); }
+@utility type-body-s { font-family: var(--body-s-font-family); font-size: var(--body-s-font-size); font-weight: var(--body-s-font-weight); line-height: var(--body-s-line-height); }
+@utility type-button { font-family: var(--button-font-family); font-size: var(--button-font-size); font-weight: var(--button-font-weight); line-height: var(--button-line-height); text-transform: uppercase; }
+@utility type-link { font-family: var(--link-font-family); font-size: var(--link-font-size); font-weight: var(--link-font-weight); line-height: var(--link-line-height); text-transform: uppercase; }
+@utility type-label-xl { font-family: var(--label-xl-font-family); font-size: var(--label-xl-font-size); font-weight: var(--label-xl-font-weight); line-height: var(--label-xl-line-height); text-transform: uppercase; }
+@utility type-label-l { font-family: var(--label-l-font-family); font-size: var(--label-l-font-size); font-weight: var(--label-l-font-weight); line-height: var(--label-l-line-height); text-transform: uppercase; }
+@utility type-label-s { font-family: var(--label-s-font-family); font-size: var(--label-s-font-size); font-weight: var(--label-s-font-weight); line-height: var(--label-s-line-height); text-transform: uppercase; }
+
+/* -------------------------------------------------------------- rich text */
+.prose {
+  --tw-prose-body: var(--color-foreground); --tw-prose-headings: var(--color-foreground);
+  --tw-prose-links: var(--color-foreground); --tw-prose-bold: var(--color-foreground);
+}
+.prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-family: var(--heading-h2-font-family); font-size: var(--heading-h2-font-size); font-weight: var(--heading-h2-font-weight);
+  line-height: var(--heading-h2-line-height); letter-spacing: var(--heading-h2-letter-spacing); font-stretch: var(--serif-stretch);
+}
+.prose :where(h3, blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-family: var(--heading-h4-font-family); font-size: var(--heading-h4-font-size); font-weight: var(--heading-h4-font-weight);
+  line-height: var(--heading-h4-line-height); letter-spacing: var(--heading-h4-letter-spacing);
+}
+.prose :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-family: var(--heading-h5-font-family); font-size: var(--heading-h5-font-size); font-weight: var(--heading-h5-font-weight);
+  line-height: var(--heading-h5-line-height); letter-spacing: var(--heading-h5-letter-spacing);
+}
+.payload-richtext :is(p, ol, ul) { font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit; }
+.payload-richtext blockquote { color: var(--color-blockquote); border: none; padding: 0; }
+
+/* ------------------------------------------------------------------ icons */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined"; font-size: 24px; font-style: normal; font-weight: 400; line-height: 1;
+  letter-spacing: normal; text-transform: none; white-space: nowrap; word-wrap: normal; direction: ltr;
+  display: inline-block; font-feature-settings: "liga";
+}
+
+/* ------------------------------------------------------------- navigation */
+.frontend-content { position: relative; z-index: 1; }
+.page-content { position: relative; z-index: 3; }
+#navigation-menu { transition: opacity 200ms ease, visibility 0s linear 200ms; }
+#navigation-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
+.menu-toggle-icon.is-open { transform: rotate(45deg); }
+@media (min-width: 64rem) {
+  .navigation-menu-item { font-size: min(12.5vw, 20vh); line-height: 0.8; }
+  .navigation-menu-item .menu-link { font-size: 1em; }
+  .navigation-menu-slash { width: auto; height: 0.65em; }
+}
+.menu-link { position: relative; }
+.menu-link::before {
+  content: ""; display: block; position: absolute; top: 108%; width: 100%; height: 8px;
+  background-color: var(--color-black); opacity: 0; transform: scaleX(0); transform-origin: 0;
+  transition: opacity 0.1s, top 0.2s;
+}
+.menu-link:hover::before { opacity: 1; transform: scaleX(1); transition: opacity 0.1s ease, top 0.2s ease, transform 0.15s var(--ease-in-out-quart); }
+#navigation-menu .menu-link:not(.active-menu-link):hover::before { opacity: 0; transform: scaleX(0); }
+.active-menu-link::before { opacity: 1; top: 50%; transform: scaleX(1); }
+[data-component="LinksBar"] .active-menu-link { color: var(--color-active-link); }
+[data-component="LinksBar"] .menu-link::before, [data-component="LinksBar"] .active-menu-link::before { opacity: 0; transform: scaleX(0); }
+[data-component="LinksBar"][data-show-active-link-line] .active-menu-link::before { opacity: 1; height: 4px; top: 50%; transform: translateY(-50%) scaleX(1); }
+[data-component="LinksBar"][data-active-link-line-color="red"] .active-menu-link::before { background-color: var(--color-active-link-line); }
+
+/* ------------------------------------------------------------------ misc */
+@media (hover: hover) and (min-width: 48rem) {
+  .work-archive-list__items:has(> li:hover) > li:not(:hover) { opacity: 0.5; }
+}
+.homepage-footer-logo { display: none; }
+
+/* --------------------------------------------------------- scroll reveals */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] { transition: opacity 0.6s ease-out, transform 0.7s var(--ease-in-out-quart), clip-path 0.9s var(--ease-in-out-quart); }
+  .js [data-reveal="fade"]:not(.is-revealed) { opacity: 0; }
+  .js [data-reveal="rise"]:not(.is-revealed) { transform: translateY(110%); }
+  .js [data-reveal="clip"]:not(.is-revealed) { clip-path: inset(0 0 100% 0); }
+  .js [data-reveal="scale-x"] { transform-origin: left; }
+  .js [data-reveal="scale-x"]:not(.is-revealed) { transform: scaleX(0); }
+}
