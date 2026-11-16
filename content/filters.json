@@ -1,0 +1,172 @@
+{
+  "/insights/articles": {
+    "all": [
+      "/insights/articles/the-price-of-broken-promises",
+      "/insights/articles/big-tech-ate-our-attention",
+      "/insights/articles/why-hard-work-is-losing-its-brand",
+      "/insights/articles/doubled-down-the-changing-economics-of-growth-brands-and-work",
+      "/insights/articles/when-productivity-becomes-the-new-currency",
+      "/insights/articles/from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy",
+      "/insights/articles/from-coal-dust-to-compute-the-new-engines-of-growth",
+      "/insights/articles/the-great-distraction-focus-in-a-fractured-world",
+      "/insights/articles/the-end-of-an-era-how-branding-lost-the-plot"
+    ],
+    "options": {
+      "industry": {
+        "brand-and-marketing": [
+          "/insights/articles/the-price-of-broken-promises",
+          "/insights/articles/big-tech-ate-our-attention",
+          "/insights/articles/why-hard-work-is-losing-its-brand",
+          "/insights/articles/doubled-down-the-changing-economics-of-growth-brands-and-work",
+          "/insights/articles/when-productivity-becomes-the-new-currency",
+          "/insights/articles/from-coal-dust-to-compute-the-new-engines-of-growth",
+          "/insights/articles/the-great-distraction-focus-in-a-fractured-world",
+          "/insights/articles/the-end-of-an-era-how-branding-lost-the-plot"
+        ],
+        "business-and-economics": [
+          "/insights/articles/from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy"
+        ],
+        "government-administration--public-services": [],
+        "health-care--social-assistance": [],
+        "arts-and-recreation": [],
+        "not-for-profit": [],
+        "sports": []
+      },
+      "sort": {
+        "-publishedDate": [
+          "/insights/articles/the-price-of-broken-promises",
+          "/insights/articles/big-tech-ate-our-attention",
+          "/insights/articles/why-hard-work-is-losing-its-brand",
+          "/insights/articles/doubled-down-the-changing-economics-of-growth-brands-and-work",
+          "/insights/articles/when-productivity-becomes-the-new-currency",
+          "/insights/articles/from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy",
+          "/insights/articles/from-coal-dust-to-compute-the-new-engines-of-growth",
+          "/insights/articles/the-great-distraction-focus-in-a-fractured-world",
+          "/insights/articles/the-end-of-an-era-how-branding-lost-the-plot"
+        ],
+        "publishedDate": [
+          "/insights/articles/the-end-of-an-era-how-branding-lost-the-plot",
+          "/insights/articles/the-great-distraction-focus-in-a-fractured-world",
+          "/insights/articles/from-coal-dust-to-compute-the-new-engines-of-growth",
+          "/insights/articles/from-stag-to-stagflation-what-the-australian-economy-can-learn-from-brand-strategy",
+          "/insights/articles/when-productivity-becomes-the-new-currency",
+          "/insights/articles/doubled-down-the-changing-economics-of-growth-brands-and-work",
+          "/insights/articles/why-hard-work-is-losing-its-brand",
+          "/insights/articles/big-tech-ate-our-attention",
+          "/insights/articles/the-price-of-broken-promises"
+        ]
+      }
+    }
+  },
+  "/work": {
+    "all": [
+      "/work/nyaal-banyul",
+      "/work/diversity-council-australia",
+      "/work/pickleball-australia",
+      "/work/wesley-mission",
+      "/work/monash-ivf",
+      "/work/climate-active"
+    ],
+    "options": {
+      "industry": {
+        "brand-and-marketing": [],
+        "business-and-economics": [],
+        "government-administration--public-services": [
+          "/work/climate-active"
+        ],
+        "health-care--social-assistance": [
+          "/work/monash-ivf"
+        ],
+        "arts-and-recreation": [
+          "/work/nyaal-banyul"
+        ],
+        "not-for-profit": [
+          "/work/diversity-council-australia",
+          "/work/wesley-mission"
+        ],
+        "sports": [
+          "/work/pickleball-australia"
+        ]
+      },
+      "service": {
+        "brand-guidelines": [
+          "/work/pickleball-australia"
+        ],
+        "brand-architecture": [
+          "/work/pickleball-australia",
+          "/work/wesley-mission"
+        ],
+        "stakeholder-engagement": [
+          "/work/diversity-council-australia",
+          "/work/wesley-mission"
+        ],
+        "content--communications": [
+          "/work/pickleball-australia"
+        ],
+        "messaging-matrix": [
+          "/work/diversity-council-australia"
+        ],
+        "design-systems--implementation": [
+          "/work/diversity-council-australia",
+          "/work/pickleball-australia"
+        ],
+        "digital-design": [
+          "/work/diversity-council-australia",
+          "/work/pickleball-australia"
+        ],
+        "employee-value-strategy": [],
+        "innovation-strategy": [],
+        "creative-strategy": [],
+        "customer--behavioural-strategy": [
+          "/work/monash-ivf"
+        ],
+        "campaign-strategy": [],
+        "communications-strategy": [],
+        "cultural--contextual-insight": [],
+        "category--competitor-analysis": [
+          "/work/climate-active"
+        ],
+        "customer--audience-insight": [],
+        "organisational-immersion": [],
+        "strategic-framing": [],
+        "research--insight": [],
+        "business--organisational-immersion": [],
+        "brand-voice": [
+          "/work/diversity-council-australia",
+          "/work/wesley-mission"
+        ],
+        "brand-identity": [
+          "/work/nyaal-banyul",
+          "/work/diversity-council-australia",
+          "/work/pickleball-australia",
+          "/work/wesley-mission",
+          "/work/monash-ivf",
+          "/work/climate-active"
+        ],
+        "brand-strategy": [
+          "/work/nyaal-banyul",
+          "/work/diversity-council-australia",
+          "/work/pickleball-australia",
+          "/work/wesley-mission",
+          "/work/monash-ivf",
+          "/work/climate-active"
+        ],
+        "development": [
+          "/work/diversity-council-australia",
+          "/work/monash-ivf"
+        ],
+        "design": [
+          "/work/diversity-council-australia",
+          "/work/monash-ivf"
+        ],
+        "brand": [
+          "/work/diversity-council-australia",
+          "/work/pickleball-australia"
+        ],
+        "marketing-strategy": [
+          "/work/pickleball-australia"
+        ]
+      }
+    }
+  }
+}

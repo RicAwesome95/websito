@@ -28,7 +28,7 @@ async function routes() {
 }
 
 async function raw(route) {
-  const file = path.join(cacheDir, slugFor(route) + '.html');
+  const file = path.join(cacheDir, slugFor(route).replace(/[?=&%]/g, '_') + '.html');
   try { return await fs.readFile(file, 'utf8'); } catch {}
   const html = await get(ORIGIN + route);
   await fs.mkdir(cacheDir, { recursive: true });
@@ -145,5 +145,30 @@ for (const route of list) {
     await fs.writeFile('content/shell/home-footer-logo.html', html(homeLogo) + '\n');
   }
 }
+// Archive filters are resolved on the server by the original. Record which items each
+// option returns so the static build can filter on the client.
+const filters = {};
+for (const route of list) {
+  const $ = cheerio.load(await raw(route));
+  const selects = $('[data-block="ArchiveFilterControls"] select');
+  if (!selects.length) continue;
+  const seen = new Set();
+  const hrefs = ($page) => [...new Set($page('.frontend-content a[href]').map((_, a) => a.attribs.href).get().filter((h) => h.startsWith(route + '/') && !h.slice(route.length + 1).includes('/')))];
+  filters[route] = { all: hrefs($), options: {} };
+  for (const select of selects.get()) {
+    const name = select.attribs.name;
+    if (seen.has(name)) continue;
+    seen.add(name);
+    filters[route].options[name] = {};
+    for (const option of $(select).find('option').get()) {
+      const value = option.attribs.value;
+      if (!value) continue;
+      const html = await raw(`${route}?${name}=${encodeURIComponent(value)}`);
+      filters[route].options[name][value] = hrefs(cheerio.load(html));
+    }
+  }
+}
+await fs.writeFile('content/filters.json', JSON.stringify(filters, null, 2) + '\n');
+
 await fs.writeFile('content/pages.json', JSON.stringify(pages, null, 2) + '\n');
 console.log(`imported ${pages.length} pages`);

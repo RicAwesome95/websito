@@ -11,6 +11,7 @@ const read = (f) => fs.readFile(f, 'utf8');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
 const pages = JSON.parse(await read('content/pages.json'));
+const filters = JSON.parse(await read('content/filters.json'));
 const shell = {
   nav: await read('content/shell/nav.html'),
   menu: await read('content/shell/menu.html'),
@@ -61,6 +62,10 @@ execFileSync('npx', ['tailwindcss', '-i', 'src/styles.css', '-o', 'dist/assets/s
 await fs.writeFile('dist/assets/site.css', fontCss + (await read('dist/assets/site.css')) + parityCss);
 execFileSync('npx', ['esbuild', 'src/js/main.js', '--bundle', '--minify', '--format=iife', '--target=es2020', '--outfile=dist/assets/site.js', '--log-level=warning'], { stdio: 'inherit' });
 
+// The homepage artwork reuses the discipline symbols that the About page already carries.
+const symbolSvgs = [...(await read('content/pages/about.html')).matchAll(/image-wrapper[^>]*>(<svg[\s\S]*?<\/svg>)/g)].map((m) => m[1]);
+const heroSymbols = symbolSvgs.map((svg) => `<template data-hero-symbol>${svg}</template>`).join('');
+
 // ---- pages -----------------------------------------------------------------
 const section = (route) => '/' + (route.split('/')[1] || '');
 function menuFor(route) {
@@ -97,6 +102,7 @@ ${page.ogImage ? `<meta property="og:image" content="${esc(page.ogImage)}">` : '
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
+${filters[page.route] ? `<script>window.__ARCHIVE_FILTERS__=${JSON.stringify(filters[page.route])}</script>` : ''}
 <script src="/assets/site.js" defer></script>
 </head>
 <body${isHome ? ' class="is-home"' : ''}>
@@ -106,7 +112,7 @@ ${menuFor(page.route)}
 <div class="frontend-content frontend-content--visible" id="content">
 ${body}
 ${shell.footer}
-${isHome ? shell.homeLogo : ''}
+${isHome ? shell.homeLogo + heroSymbols : ''}
 </div>
 </body>
 </html>
