@@ -131,6 +131,7 @@ export function initHome() {
   const overlay = $('.homepage-intro-copy__image-stage-overlay', hero);
   const links = $$('.homepage-intro-copy__desktop-links .homepage-intro-link', hero);
   gsap.set(images, { autoAlpha: 0 });
+  for (const el of $$('.homepage-intro-link', hero)) el.style.opacity = '';
   const activate = (index) => {
     states.forEach((el, i) => {
       const on = index === null ? i === 0 : i === index + 1;

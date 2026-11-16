@@ -298,3 +298,10 @@ body.is-home nav[aria-label="Main navigation"] > div:first-child { visibility: h
 @media (prefers-reduced-motion: reduce) {
   .homepage-intro-copy__desktop-state, .homepage-intro-copy__desktop-word { transition: none; }
 }
+body.is-home nav[aria-label="Main navigation"][data-menu-open="true"] { color: #000; }
+body.is-home nav[aria-label="Main navigation"][data-menu-open="true"] > div:first-child { visibility: visible; }
+[hidden] { display: none !important; }
+/* While the menu is open only the toggle stays on top of it. */
+nav[aria-label="Main navigation"][data-menu-open="true"] { z-index: 70; background-color: transparent; border-color: transparent; pointer-events: none; }
+nav[aria-label="Main navigation"][data-menu-open="true"] > div:first-child { visibility: hidden !important; }
+nav[aria-label="Main navigation"][data-menu-open="true"] > button { pointer-events: auto; }

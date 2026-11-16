@@ -24,7 +24,8 @@ import http from 'node:http';
 import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import * as cheerio from 'cheerio';
-import { ORIGIN, slugFor, outFor } from './lib.mjs';
+import { ORIGIN, outFor } from './lib.mjs';
+import { smoke } from './smoke.mjs';
 
 const require = createRequire(import.meta.url);
 const args = process.argv.slice(2);
@@ -247,11 +248,14 @@ for (const width of WIDTHS) {
   process.stdout.write(` ${width}px\n`);
 }
 await browser.close();
+// 6: interactions, each driven once on the remake
+const interactionFailures = ONLY ? [] : await smoke(base);
 server.close();
 
 // ---------------------------------------------------------------- write up
 const failed = (r) => r.coverage.length || r.content.length || r.links.length || r.runtime.length || Object.values(r.layout).some((l) => l.length);
 const failing = routes.filter((r) => failed(results[r]));
+const incomplete = failing.length + interactionFailures.length;
 const count = (pick) => routes.filter((r) => !pick(results[r])).length;
 const mark = (ok) => (ok ? 'pass' : '**FAIL**');
 const lines = [
@@ -270,6 +274,7 @@ const lines = [
   `| Links — internal links resolve | ${count((r) => r.links.length)}/${routes.length} |`,
   ...WIDTHS.map((w) => `| Layout at ${w}px — every element within ${TOLERANCE}px | ${count((r) => r.layout[w]?.length || r.coverage.length)}/${routes.length} |`),
   `| Runtime — no JavaScript errors | ${count((r) => r.runtime.length)}/${routes.length} |`,
+  `| Interactions — menu, forms, filters, accordions, carousel, intro | ${ONLY ? 'not run' : interactionFailures.length ? `**${interactionFailures.length} failing**` : 'all pass'} |`,
   '',
   '## Pages',
   '',
@@ -281,6 +286,7 @@ const lines = [
   }),
   '',
 ];
+if (interactionFailures.length) lines.push('## Interaction failures', '', ...interactionFailures.map((f) => `- ${f}`), '');
 if (failing.length) {
   lines.push('## Differences', '');
   for (const route of failing) {
@@ -299,11 +305,11 @@ lines.push(
   'not part of this repository, the homepage artwork is a 2D reinterpretation, and analytics',
   'tags were left out. Those are deliberate and are not counted here.',
   '',
-  ONLY ? `PARTIAL RUN (${routes.length - failing.length}/${routes.length} pages match)` : failing.length ? `REMAKE INCOMPLETE (${failing.length})` : 'REMAKE COMPLETE',
+  ONLY ? `PARTIAL RUN (${routes.length - failing.length}/${routes.length} pages match)` : incomplete ? `REMAKE INCOMPLETE (${incomplete})` : 'REMAKE COMPLETE',
   '',
 );
 await fs.mkdir('report', { recursive: true });
 await fs.writeFile('report/REPORT.md', lines.join('\n'));
 await fs.writeFile('report/report.json', JSON.stringify(results, null, 2) + '\n');
 console.log(`\n${lines.at(-2)}\nreport/REPORT.md`);
-process.exitCode = failing.length ? 1 : 0;
+process.exitCode = incomplete ? 1 : 0;

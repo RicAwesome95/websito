@@ -1,7 +1,7 @@
 # Remake report
 
 Original: https://thecontenders.co  
-Generated: 2026-11-16T15:37:29.358Z  
+Generated: 2026-11-16T20:58:05.906Z  
 Pages checked: 62
 
 ## Summary
@@ -14,6 +14,7 @@ Pages checked: 62
 | Layout at 1440px — every element within 3px | 62/62 |
 | Layout at 390px — every element within 3px | 62/62 |
 | Runtime — no JavaScript errors | 62/62 |
+| Interactions — menu, forms, filters, accordions, carousel, intro | all pass |
 
 ## Pages
 

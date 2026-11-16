@@ -7,6 +7,7 @@ import { execFileSync } from 'node:child_process';
 import { outFor } from './lib.mjs';
 
 const SITE_URL = process.env.SITE_URL || '';
+const FORM_ENDPOINT = process.env.FORM_ENDPOINT || '';
 const read = (f) => fs.readFile(f, 'utf8');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
@@ -85,7 +86,7 @@ function render(page, body) {
   const isHome = page.route === '/';
   const canonical = SITE_URL ? `<link rel="canonical" href="${esc(SITE_URL + (isHome ? '' : page.route))}">` : '';
   return `<!doctype html>
-<html lang="en">
+<html lang="en"${FORM_ENDPOINT ? ` data-form-endpoint="${esc(FORM_ENDPOINT)}"` : ''}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -119,9 +120,18 @@ ${isHome ? shell.homeLogo + heroSymbols : ''}
 `;
 }
 
+// Work archive rows show a floating preview on hover; use each project's hero media for it.
+const previews = {};
+for (const page of pages.filter((p) => /^\/work\/[^/]+$/.test(p.route))) {
+  const hero = (await read(`content/pages/${page.slug}.html`)).match(/work-header__media [^>]*>[\s\S]*?(?:<img|<source)[^>]*\ssrc="([^"]+)"/);
+  if (hero) previews[page.route] = hero[1];
+}
+const withPreviews = (body) => body.replace(/<li data-preview-index="(\d+)"([^>]*)>(\s*<a [^>]*href="([^"]+)")/g,
+  (m, index, rest, link, href) => (previews[href] ? `<li data-preview-index="${index}" data-preview-src="${esc(previews[href])}"${rest}>${link}` : m));
+
 for (const page of pages) {
   const override = `src/pages/${page.slug}.html`;
-  const body = await read(existsSync(override) ? override : `content/pages/${page.slug}.html`);
+  const body = withPreviews(await read(existsSync(override) ? override : `content/pages/${page.slug}.html`));
   const out = path.join('dist', outFor(page.route));
   await fs.mkdir(path.dirname(out), { recursive: true });
   await fs.writeFile(out, render(page, body));

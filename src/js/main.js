@@ -3,10 +3,11 @@ import { initMenu } from './nav.js';
 import * as blocks from './blocks.js';
 import * as pages from './pages.js';
 import { initHome } from './home.js';
+import * as forms from './forms.js';
 
 initSmoothScroll();
 initMenu();
-for (const init of [initHome, ...Object.values(blocks), ...Object.values(pages)]) {
+for (const init of [initHome, ...Object.values(blocks), ...Object.values(pages), ...Object.values(forms)]) {
   try { init(); } catch (error) { console.error(error); }
 }
 addEventListener('load', () => ScrollTrigger.refresh());
