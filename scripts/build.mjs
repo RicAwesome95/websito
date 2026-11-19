@@ -63,10 +63,6 @@ execFileSync('npx', ['tailwindcss', '-i', 'src/styles.css', '-o', 'dist/assets/s
 await fs.writeFile('dist/assets/site.css', fontCss + (await read('dist/assets/site.css')) + parityCss);
 execFileSync('npx', ['esbuild', 'src/js/main.js', '--bundle', '--minify', '--format=iife', '--target=es2020', '--outfile=dist/assets/site.js', '--log-level=warning'], { stdio: 'inherit' });
 
-// The homepage artwork reuses the discipline symbols that the About page already carries.
-const symbolSvgs = [...(await read('content/pages/about.html')).matchAll(/image-wrapper[^>]*>(<svg[\s\S]*?<\/svg>)/g)].map((m) => m[1]);
-const heroSymbols = symbolSvgs.map((svg) => `<template data-hero-symbol>${svg}</template>`).join('');
-
 // ---- pages -----------------------------------------------------------------
 const section = (route) => '/' + (route.split('/')[1] || '');
 function menuFor(route) {
@@ -113,7 +109,7 @@ ${menuFor(page.route)}
 <div class="frontend-content frontend-content--visible" id="content">
 ${body}
 ${shell.footer}
-${isHome ? shell.homeLogo + heroSymbols : ''}
+${isHome ? shell.homeLogo : ''}
 </div>
 </body>
 </html>

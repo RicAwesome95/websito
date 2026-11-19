@@ -100,8 +100,10 @@ export async function smoke(baseUrl, shotsDir) {
 
   // Homepage: the artwork lands on click and reveals the headline links.
   await open('/');
-  await page.mouse.click(720, 450);
-  await page.waitForTimeout(1500);
+  check('homepage intro starts on red', await page.evaluate(() => !document.body.classList.contains('hero--post-impact')));
+  const revealed = await page.waitForFunction(() => document.body.classList.contains('hero--post-impact'), null, { timeout: 9000 }).then(() => true, () => false);
+  check('homepage intro plays by itself', revealed);
+  await page.waitForTimeout(900);
   check('homepage intro reveals', await page.isVisible('.homepage-intro-copy__desktop-links a[href="/work"]'));
   await page.hover('.homepage-intro-copy__desktop-links a[href="/work"]');
   await page.waitForTimeout(500);

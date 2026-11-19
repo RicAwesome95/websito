@@ -64,17 +64,19 @@ These are deliberate and are not counted by the report.
   both sides.
 - **Images, video and PDFs** are referenced from the original's media storage rather than
   copied into the repository.
-- **Homepage artwork.** The original is a WebGL physics piece; this is a 2D canvas
-  reinterpretation of it (tumbling T and C, a discipline symbol, landing on click). It also
-  lands by itself after six seconds so the page is usable without interacting.
+- **Homepage artwork.** The original renders the intro with WebGL and a physics engine; this
+  is a 2D canvas version of the same timeline, using the original's T, C and animal images:
+  the symbol fades in, the letters fly in and collide over it, the symbol strobes through the
+  animals and bursts into dots, then the letters drop and the headline appears (about four
+  seconds). Clicking the empty hero afterwards replays it. The fluid distortion that follows
+  the pointer on the original is not reproduced.
 - **Forms.** There is no server. The newsletter and contact forms post to `FORM_ENDPOINT`
   when set and otherwise open the visitor's mail client. The contact note form's fields are
   this project's own design. Report downloads are direct links, without the original's
   sign-up gate, and there is no bot check.
 - **Archive filters** run in the browser against data recorded at import time; the original
   filters on the server.
-- **Left out:** analytics tags, the page-to-page transition animation and the film-grain
-  overlay on the homepage.
+- **Left out:** analytics tags and the page-to-page transition animation.
 
 ## Rights
 

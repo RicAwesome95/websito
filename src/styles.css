@@ -305,3 +305,6 @@ body.is-home nav[aria-label="Main navigation"][data-menu-open="true"] > div:firs
 nav[aria-label="Main navigation"][data-menu-open="true"] { z-index: 70; background-color: transparent; border-color: transparent; pointer-events: none; }
 nav[aria-label="Main navigation"][data-menu-open="true"] > div:first-child { visibility: hidden !important; }
 nav[aria-label="Main navigation"][data-menu-open="true"] > button { pointer-events: auto; }
+/* As on the original, the menu button only appears once the intro has played. */
+body.is-home:not(.hero--post-impact) nav[aria-label="Main navigation"] { opacity: 0; pointer-events: none; }
+body.is-home nav[aria-label="Main navigation"] { transition: opacity 0.6s ease-out 0.24s; }
