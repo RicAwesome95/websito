@@ -11,6 +11,13 @@ npm run serve     # http://localhost:4173
 npm run report    # compare dist/ with the live original -> report/REPORT.md
 ```
 
+## Deploying
+
+`netlify.toml` holds the Netlify settings: build command `npm run build`, publish folder
+`dist`, Node 22. It also sends a `noindex` header so search engines don't index the copy;
+remove that block if the deployment should be indexed. Any host that serves a folder from
+the domain root works the same way.
+
 ## How it is put together
 
 | Path | What it is |

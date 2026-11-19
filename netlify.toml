@@ -1,0 +1,23 @@
+# Netlify: builds the static site and serves dist/ from the domain root.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Optional, set in the Netlify UI instead if you prefer:
+  # SITE_URL = "https://your-site.netlify.app"
+  # FORM_ENDPOINT = "https://…"
+
+# Keep search engines from indexing this copy, so it doesn't compete with the original
+# site. Delete this block if this deployment is meant to be the public, indexed site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# Long-lived caching for fonts; CSS and JS keep stable names, so they revalidate.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
